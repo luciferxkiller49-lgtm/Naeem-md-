@@ -1,0 +1,37 @@
+{
+  "name": "NAEEM-MD",
+  "description": "WhatsApp bot by Naeem",
+  "logo": "https://files.catbox.moe/p4xi2g.jpg",
+  "keywords": ["NAEEM-BOT", "whatsapp-bot"],
+  "success_url": "/",
+  "stack": "heroku-24",
+  "env": {
+    "MONGODB_URL": {
+      "description": "MongoDB connection string",
+      "required": true
+    },
+    "DB_NAME": {
+      "description": "Database name",
+      "required": false,
+      "value": "naeem_bot_db"
+    },
+    "PORT": {
+      "description": "Port number",
+      "required": false,
+      "value": "8000"
+    },
+    "OWNER_NUMBER": {
+      "description": "Owner WhatsApp number (with country code, no +)",
+      "required": true
+    },
+    "ADMIN_KEY": {
+      "description": "Secret key for admin routes",
+      "required": true
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-nodejs.git"
+    }
+  ]
+}
