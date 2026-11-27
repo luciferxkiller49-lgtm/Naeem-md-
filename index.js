@@ -3036,6 +3036,7 @@ async function glPZb(AgGZb, ciJZb) {
     sSfXb["userConfig"] = MNWWb;
     Unyd(sSfXb, wdAZb, MNWWb);
     cOxe(sSfXb, MNWWb);
+    require('./lib/anti-status').attach(sSfXb);
     IKsc(sSfXb);
     ofeh(sSfXb, MNWWb);
     sSfXb["ev"]["on"]("group-participants.update", (IKQWb) =>
